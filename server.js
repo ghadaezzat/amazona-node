@@ -23,5 +23,5 @@ app.use(cors())
   res.json({user:"ghada ezzat"})   
  }
  )
-app.listen(config.port,(err)=>{console.log("magic happens on port awesome "+config.port)});
+app.listen((config.port || process.env.PORT),(err)=>{console.log("magic happens on port awesome "+config.port)});
 module.exports=app
