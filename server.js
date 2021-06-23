@@ -11,6 +11,9 @@ mongoose.connect(config.database,{useUnifiedTopology: true,
     useNewUrlParser: true},(err)=>{
     if(err){
         console.log("connection error "+err)
+        app.get('/',(req,res,next)=>{
+            res.json({error:err})   
+           }
     }else{
         console.log("connected successfully to database")
     }
