@@ -12,8 +12,9 @@ mongoose.connect(config.database,{useUnifiedTopology: true,
     if(err){
         console.log("connection error "+err)
         app.get('/',(req,res,next)=>{
-            res.json({error:err})   
+            res.json({err:"ghada ezzat"})   
            }
+        )
     }else{
         console.log("connected successfully to database")
     }
